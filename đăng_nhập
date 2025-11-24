@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Đăng nhập / Đăng ký - LiBaDu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6F4E37",
+              "background-light": "#FFFFFF",
+              "background-dark": "#1a1a1a",
+              "text-light": "#333333",
+              "text-dark": "#f0f0f0",
+              "border-light": "#E0E0E0",
+              "border-dark": "#444444",
+              "subtle-light": "#f8f8f8",
+              "subtle-dark": "#2a2a2a",
+            },
+            fontFamily: {
+              "display": ["Poppins"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
+<div class="w-full max-w-md">
+<!-- Logo -->
+<div class="mb-8 flex flex-col items-center">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-3xl font-bold leading-tight tracking-tighter text-text-light dark:text-text-dark">LiBaDu</h2>
+</div>
+</div>
+<!-- Form Container -->
+<div class="w-full rounded-xl border border-border-light bg-background-light p-8 shadow-sm dark:border-border-dark dark:bg-subtle-dark">
+<!-- Page Heading -->
+<div class="mb-6 text-center">
+<p class="text-[28px] font-bold leading-tight tracking-tight text-text-light dark:text-text-dark">Chào mừng trở lại</p>
+<p class="mt-1 text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Đăng nhập để tiếp tục hành trình cà phê của bạn</p>
+</div>
+<!-- Segmented Buttons -->
+<div class="mb-6 flex">
+<div class="flex h-11 flex-1 items-center justify-center rounded-lg bg-subtle-light p-1 dark:bg-background-dark">
+<label class="flex h-full grow cursor-pointer items-center justify-center overflow-hidden rounded-md px-2 text-sm font-medium leading-normal text-gray-500 has-[:checked]:bg-primary has-[:checked]:text-white dark:text-gray-400">
+<span class="truncate">Đăng nhập</span>
+<input checked="" class="invisible w-0" name="auth-toggle" type="radio" value="Đăng nhập"/>
+</label>
+<label class="flex h-full grow cursor-pointer items-center justify-center overflow-hidden rounded-md px-2 text-sm font-medium leading-normal text-gray-500 has-[:checked]:bg-primary has-[:checked]:text-white dark:text-gray-400">
+<span class="truncate">Đăng ký</span>
+<input class="invisible w-0" name="auth-toggle" type="radio" value="Đăng ký"/>
+</label>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-4">
+<!-- Email -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-text-light dark:text-text-dark">Email hoặc Số điện thoại</p>
+<input class="form-input flex h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-sm font-normal leading-normal text-text-light placeholder:text-gray-400 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-subtle-dark dark:text-text-dark dark:focus:border-primary" placeholder="Nhập email hoặc số điện thoại của bạn" value=""/>
+</label>
+<!-- Password -->
+<label class="flex flex-col">
+<div class="flex items-center justify-between pb-2">
+<p class="text-sm font-medium leading-normal text-text-light dark:text-text-dark">Mật khẩu</p>
+<a class="text-xs font-medium text-primary hover:underline" href="#">Quên mật khẩu?</a>
+</div>
+<input class="form-input flex h-12 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-3 text-sm font-normal leading-normal text-text-light placeholder:text-gray-400 focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-subtle-dark dark:text-text-dark dark:focus:border-primary" placeholder="Nhập mật khẩu của bạn" type="password" value=""/>
+</label>
+</div>
+<!-- Submit Button -->
+<button class="mt-6 flex h-12 w-full items-center justify-center rounded-lg bg-primary text-base font-semibold text-white transition-colors hover:bg-primary/90">Đăng nhập</button>
+<!-- Social Login Divider -->
+<div class="my-6 flex items-center gap-4">
+<hr class="w-full border-t border-border-light dark:border-border-dark"/>
+<span class="shrink-0 text-xs font-medium text-gray-500 dark:text-gray-400">Hoặc</span>
+<hr class="w-full border-t border-border-light dark:border-border-dark"/>
+</div>
+<!-- Social Login Buttons -->
+<div class="flex flex-col gap-4">
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-border-light bg-background-light text-sm font-medium text-text-light transition-colors hover:bg-subtle-light dark:border-border-dark dark:bg-subtle-dark dark:text-text-dark dark:hover:bg-background-dark">
+<img alt="Google logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt27x-bAF-_EcJhRCuJsAEwBmNyET3sxxaBua-c0VaC113HyawDD4blH2UypyBTPyhSfAL0Pz_r2rSsi-OSHGJ7Z7qraxmOk8OxSp6e5_56PeaFzr7eKNO7yKCVh_v3iuh8f4uHpsm0EDoN87a7fT9UJcrziMmpFcSKWGn3Ce-xLFzy5DK44ii25NrIrGqYKtRgATERo67hw1pqVsBHm11H-aRfAuH8CwT19_myrgOf14S_7Cflk3nF9v47w8iGvgrbrrVRBxngrE"/>
+<span>Đăng nhập với Google</span>
+</button>
+<button class="flex h-12 w-full items-center justify-center gap-3 rounded-lg border border-border-light bg-background-light text-sm font-medium text-text-light transition-colors hover:bg-subtle-light dark:border-border-dark dark:bg-subtle-dark dark:text-text-dark dark:hover:bg-background-dark">
+<img alt="Facebook logo" class="h-5 w-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHtAbrAJYLTg6EdBbT9o6hb3LFLI4rHOK0CMPVZbp00NHCXo_PpMPvfGksqtS6kp_Ow6i4mN_3eUy-1TFc1mDmvGoetlcAWocIhyuC1h6YkqmA31RgJw_gVJYRdHK55q_Ez6TiHtfOkrCkNGdI3K6warXIzn1LIuPE7BFw5SLC9lNFljaCVlgxYfEhqqYL8cRAKly0eISlSlbIexnA4MEddN7bOEqjrzwZs4UxI5bYkwGK7C18pO7ncIa7NPcSImMXQvKBYXDz458"/>
+<span>Đăng nhập với Facebook</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>
